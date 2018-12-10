@@ -6,3 +6,4 @@ from .models import Product
 def post_list(request):
     posts = Product.objects.all()
     return render(request, 'shop/post_list.html', {'posts': posts})
+
