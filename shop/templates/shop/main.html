@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -7,12 +8,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head> 
 <body>
-<img src="../shop/images/logo.png" alt="Our logo" style="float:left;width:21%;height:20%;"> 
+<img src="{% static 'images/logo.png'%}" alt="Our logo" style="float:left;width:21%;height:20%;"> 
 <table id="c" style="float: right; text-decoration: none;">
     <tr>
-        <td><img src="{% static 'images/clock.png' %}" style="float: right; font-weight: 4%;height: 8%"></td>
+        <td><img src="{% static 'images/clock.png' %}" style=" font-weight: 4%;height: 8%"></td>
         <td style="text-align: center; font-family: serif; font-size: 20px; color: #070b4a"> Time schedule: </td>
-        <td><img src="images/phone.png" style="font-weight: 25px; height: 25px; float: right"></td>
+        <td><img src="{% static 'images/phone.png' %}" style="font-weight: 25px; height: 25px;"></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (707) 123-77-83 </span></td>
     </tr>
     
@@ -55,7 +56,7 @@
   
 
 
-<li> <a href="stores.html" tabinex="3" title="Stores" target="_self"> Stores </a> </li> 
+<li> <a href="{% url 'stores' %}"> Stores </a> </li> 
 <li> <a href="about.html" tabindex="4" title="About" target="_self"> About us </a> </li> 
 
 </ul>
@@ -72,7 +73,8 @@
     {% for post in posts %}
     <div>
         <h2><a href="">Product: {{ post.name }}</a></h2>
-        <p>Photo: <img src="{{ post.photo }}" > </p>
+        <p>Photo: {{ post.photo.url }} </p>
+        
         <p>{{ post.description|linebreaksbr }}</p>
         <p>Department: {{ post.dept }}</p>
         <hr><hr><hr><hr><hr>

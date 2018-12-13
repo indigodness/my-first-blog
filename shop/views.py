@@ -14,4 +14,3 @@ def about(request):
 def stores(request):
     posts = Product.objects.all()
     return render(request, 'shop/stores.html', {'posts': posts})
-

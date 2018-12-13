@@ -9,7 +9,7 @@ class Product(models.Model):
     print("THIS IS PRINT",settings.MEDIA_ROOT+"/456339_XxqsMMx.jpg")
 #    os.chdir(settings.MEDIA_ROOT)
     print(os.getcwd())
-    photo = models.ImageField(settings.MEDIA_ROOT+"/456339_XxqsMMx.jpg")
+    photo = models.ImageField()
     description = models.TextField()
     dept = models.CharField(max_length = 50)
 

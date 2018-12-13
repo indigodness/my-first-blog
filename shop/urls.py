@@ -4,11 +4,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-               url(r'^$', views.main, name='main'),
+               url(r'', views.main, name='main'),
                url(r'^$', views.about, name='about'),
                url(r'^$', views.stores, name='stores'),
                ]
-
 
 #if settings.DEBUG:
 #urlpatterns += [
