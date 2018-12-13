@@ -1,0 +1,317 @@
+
+/*========================================= CSS Reset ====================================================================================*/
+html,body,h1,h2,h3,h4,h5,h6,p,a,div,ul,li,blockquote{
+padding: 0;
+margin: 0;
+font-family: Arial;
+font-size: 100%;
+color: #ddd;
+}
+/*========================================= general styles ====================================================================================*/
+html
+{
+    background-color: #ffffff;
+}
+
+
+h1,h2,h3,h4{
+    text-transform: capitalize;
+    font-weight: 700;
+    padding-top: 40px;
+    padding-bottom: 5px;}
+
+h1{font-size: 2em;
+padding-top: 40px;
+padding-bottom: 5px;}
+
+h2{font-size: 1.6em;
+padding-top: 40px;
+padding-bottom: 5px;
+}
+
+h3{font-size: 1.15em;
+padding-top: 60px;
+padding-bottom: 5px;
+}
+
+h4{font-size: 1.05em;
+}
+
+
+p{padding-top: 10px;
+padding-bottom: 10px;
+font-size: 90%;
+line-height: 1.5em;
+color: #000000
+}
+.floatRightImg
+{
+    float: right;
+	margin: 10px 0 10px 20px;
+    padding: 5px;
+}
+/*========================================= header/nav ====================================================================================*/
+header{
+    background-color: #ffffff;
+}
+
+
+nav ul li{
+    float: left;
+    list-style: none; 
+}
+
+nav ul li a:link{
+    width: 100px;
+    padding: 11px 20px;
+    display: inline-block;
+    background-color: #0e5ad3;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none; 
+}
+nav ul li a:visited{
+    width: 140px;
+    padding: 0px 0;
+    display: inline-block;
+    background-color: #0e5ad3;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none; 
+}
+nav ul li:hover a,nav ul li:active a{   
+    background-color: #070b4a;
+    transition: background 0.5s; 
+    
+}
+nav ul li a.active{
+    background-color: #0f4191;
+}
+
+.rand
+{
+    width: 1000px;
+    padding: 1500px 2000px;
+    display: inline-block;
+    background-color: #ffffff;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none; 
+}
+/*========================================= main ====================================================================================*/
+
+/*========================================= footer ====================================================================================*/
+blockquote
+{
+    font-family: Georgia, serif;
+    background-color: #444444;
+    border-top: 1px solid #aaaaaa;
+    font-size: 1.1em;
+    color: #cccccc;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    text-align: center;
+}
+footer{
+    background: #efefef;
+}
+
+.columnWrapper{
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+}
+.column{
+    width: 180px;
+    padding: 0 0 0 10px;
+    border-right: 2px solid #222222;
+    float: left;
+}
+.column:last-child{
+    border-right: none;
+}
+h4{
+    padding: 15px 0 7px;
+    color: #000000;
+    text-transform: capitalize;
+}
+.address{
+    font-size: .75em;
+    line-height: 1.6em;
+    color: #888888;
+}
+footer a:link, footer a:visited{
+    line-height: 1.6em;
+    color: #555555;
+}
+footer a:hover, footer a:active{
+    color: #ef3e36;
+    transition: color .5s;
+}
+.copyrightText
+{
+    padding: 40px 0 10px;
+    font-size: .7em;
+    color: #000000;
+    text-align: center;
+}
+main{
+    clear: both;
+    width: 1080px;
+    margin: 0 auto;
+    padding: 60px 0 100px; 
+}
+
+main h1:first-child, main h2:first-child{
+    padding-top: 0;
+}
+main ul, main li{
+    padding: 10px 0;
+    font-size: .9em;
+    line-height: 1.5em;
+    color: #000000;   
+}
+
+main li{
+    margin: 0 0 0 25px; 
+}
+
+
+table
+{
+    margin: 10px;
+    table-layout: auto;
+}
+table td
+{
+    padding: 10px 40px;
+    font-size: .8em;
+}
+
+
+#c
+{
+    border: none;
+    border-collapse: collapse;
+}
+#d
+{
+    color: black;
+    border: none;
+    border-collapse:collapse;
+}
+#d td
+{
+    padding: 10px 10px;
+}
+
+#idk
+{
+    border-collapse: collapse;
+    border: 0px;
+}
+#idk td
+{
+    border: 0px;
+}
+#idk th
+{
+    border: 0px;
+}
+#idk tr:nth-child(odd)
+{
+    background-color: #1c1c1c;
+}
+
+form
+{
+    width: 960px;
+    margin: 10px 0;
+    padding: 5px 20px 10px;
+    border: 1px solid #999999;
+}
+label
+{
+	margin: 50px 0;
+    color: #dddddd;
+    font-weight: 700;
+    font-size: .9em;
+    text-align: left;
+}
+input[type="text"]
+{
+	margin: 5px 0;
+    width: 300px;
+    padding: 5px;
+    background-color: #eeeeee;
+    font-size: 1em;
+    color: #333333;
+}
+input[type="file"]
+{
+	margin: 5px 0;
+}
+
+textarea
+{
+    width: 300px;
+    padding: 5px;
+    background-color: #eeeeee;
+    font-size: 1em;
+    color: #333333;
+    height: 150px;
+    line-height: 1.2em;
+}
+input[type="submit"], input[type="button"],input[type="reset"]
+{
+    margin: 20px 30px 0 0;
+    padding: 6px 30px;
+    font-size: .75em;
+    color: white;
+    font-weight: 700;
+    background-color: #555555;
+    transition: background-color .75s;
+    border: 0;
+    cursor: default;  
+}
+input[type="submit"]:hover, input[type="button"]:hover,input[type="submit"]:active, input[type="button"]:active
+{
+    background-color: #ef3e36;
+}
+
+
+
+.dropbtn { 
+background-color: #0e5ad3; 
+color: #eeeeee; 
+padding: 11px 48px; 
+display: block;
+font-size: .8em;
+border: none; 
+} 
+
+.dropdown { 
+position: relative; 
+display: block; 
+} 
+
+.dropdown-content { 
+margin: 37px 140px;
+display: none; 
+position: absolute;
+background-color: #0e5ad3; 
+z-index: 1; 
+} 
+
+.dropdown-content a { 
+    font-size: .9em
+color: #ffffff; 
+padding: 11px 47px; 
+text-decoration: none; 
+display: block; 
+} 
+    
+.dropdown-content a:hover {background-color: #070b4a;} 
+.dropdown:hover .dropdown-content {display: block;} 
+.dropdown:hover .dropbtn {background-color: #070b4a;} 
+   
