@@ -1,14 +1,14 @@
 {% load static %}
 
-<!DOCTYPE html> 
-<html> 
-<head> 
-<meta charset="utf-8"> 
-<title> Frozen &mdash; IM </title> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Frozen &mdash; IM </title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head> 
+</head>
 <body>
-<img src="{% static 'images/logo.png'%}" alt="Our logo" style="float:left;width:21%;height:20%;"> 
+<img src="{% static 'images/logo.png'%}" alt="Our logo" style="float:left;width:21%;height:20%;">
 <table id="c" style="float: right; text-decoration: none;">
     <tr>
         <td><img src="{% static 'images/clock.png' %}" style=" font-weight: 4%;height: 8%"></td>
@@ -16,55 +16,55 @@
         <td><img src="{% static 'images/phone.png' %}" style="font-weight: 25px; height: 25px;"></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (707) 123-77-83 </span></td>
     </tr>
-    
+
     <tr>
         <td></td>
         <td style="font-family:serif;font-size: 14px; color: #070b4a"> <span style="font-size: 90%;">Weekdays:    08:00 - 00:00 </span></td>
         <td></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (707) 123-77-04</span> </td>
     </tr>
-    
+
     <tr>
         <td></td>
         <td style="font-family:serif;font-size: 14px; color: #070b4a"> <span style="font-size: 90%;">Weekends:      10:00 - 22:00</span> </td>
         <td></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (708) 293-48-07 </span></td>
-    </tr> 
-        
-        
+    </tr>
+
+
 </table>
 <br><br><br><br><br><br><br><br>
     <header style="background-color: #0e5ad3">
- <nav> 
-    <ul class="menu"> 
-<li> <a href="{% url 'main' %}"> Main </a> </li> 
-<div class="dropdown"> 
+ <nav>
+    <ul class="menu">
+<li> <a href="{% url 'main' %}"> Main </a> </li>
+<div class="dropdown">
 <li><a class="dropbtn">Grocery</a> </li>
-<div class="dropdown-content"> 
+<div class="dropdown-content">
 
-<a href="{% url 'bakery' %}">Bakery</a> 
-<a href="{% url 'cereal' %}">Cereal</a> 
-<a href="{% url 'diary' %}">Diary</a> 
-<a href="{% url 'drinks' %}">Drinks</a> 
-<a href="{% url 'frozen' %}" class="active">Frozen</a> 
-<a href="{% url 'meat' %}">Meat</a> 
-<a href="{% url 'snack' %}">Snack</a> 
+<a href="{% url 'bakery' %}">Bakery</a>
+<a href="{% url 'cereal' %}">Cereal</a>
+<a href="{% url 'diary' %}">Diary</a>
+<a href="{% url 'drinks' %}">Drinks</a>
+<a href="{% url 'frozen' %}" class="active">Frozen</a>
+<a href="{% url 'meat' %}">Meat</a>
+<a href="{% url 'snack' %}">Snack</a>
 <a href="{% url 'vegan' %}">Vegan</a>
-</div> 
-</div> 
-<li> <a href="{% url 'stores' %}"> Stores </a> </li> 
-<li> <a href="{% url 'about' %}"> About us </a> </li> 
+</div>
+</div>
+<li> <a href="{% url 'stores' %}"> Stores </a> </li>
+<li> <a href="{% url 'about' %}"> About us </a> </li>
 
 </ul>
 </nav>
 <br><br>
-</header> 
-<main>  
-    
+</header>
+<main>
+
     {% for post in posts %}
     <div>
         {% if post.dept == 'frozen' %}
-        <h2>Product: {{ post.name }}</h2>
+        <h2 style="color:black;">Product: {{ post.name }}</h2>
         <p>Photo: <img src="{{ post.photo }}" > </p>
         <p>{{ post.description|linebreaksbr }}</p>
         <p>Department: {{ post.dept }}</p>
@@ -73,15 +73,15 @@
         {% endif %}
     </div>
 {% endfor %}
-    
-</main> 
-<footer> 
+
+</main>
+<footer>
     <hr>
-    
-    
-    
-    
-<p>All rights not reserved =)</p> 
-</footer> 
-</body> 
+
+
+
+
+<p>All rights not reserved =)</p>
+</footer>
+</body>
 </html>
