@@ -4,7 +4,7 @@
 <html> 
 <head> 
 <meta charset="utf-8"> 
-<title> Main &mdash; IM </title> 
+<title> Snack &mdash; IM </title> 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head> 
 <body>
@@ -37,7 +37,7 @@
     <header style="background-color: #0e5ad3">
  <nav> 
     <ul class="menu"> 
-<li> <a href="{% url 'main' %}" class="active"> Main </a> </li> 
+<li> <a href="{% url 'main' %}"> Main </a> </li> 
 <div class="dropdown"> 
 <li><a class="dropbtn">Grocery</a> </li>
 <div class="dropdown-content"> 
@@ -48,7 +48,7 @@
 <a href="{% url 'drinks' %}">Drinks</a> 
 <a href="{% url 'frozen' %}">Frozen</a> 
 <a href="{% url 'meat' %}">Meat</a> 
-<a href="{% url 'snack' %}">Snack</a> 
+<a href="{% url 'snack' %}" class="active">Snack</a> 
 <a href="{% url 'vegan' %}">Vegan</a>
 </div> 
 </div> 
@@ -59,18 +59,27 @@
 </nav>
 <br><br>
 </header> 
-<main>
-    <br>
- 
+<main>  
     
-    <div id="comslider_in_point_1728047"></div><script type="text/javascript">var oCOMScript1728047=document.createElement('script');oCOMScript1728047.src="https://commondatastorage.googleapis.com/comslider/target/users/1544378736x74aeba892a768e76e9a13295a527c45f/comslider.js?timestamp=1544379300&ct="+Date.now();oCOMScript1728047.type='text/javascript';document.getElementsByTagName("head").item(0).appendChild(oCOMScript1728047);</script>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    {% for post in posts %}
+    <div>
+        {% if post.dept == 'snack' %}
+        <h2>Product: {{ post.name }}</h2>
+        <p>Photo: <img src="{{ post.photo }}" > </p>
+        <p>{{ post.description|linebreaksbr }}</p>
+        <p>Department: {{ post.dept }}</p>
+        <hr><br><br><br><br>
+        {% else %}
+        {% endif %}
+    </div>
+{% endfor %}
     
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </main> 
 <footer> 
     <hr>
+    
+    
+    
     
 <p>All rights not reserved =)</p> 
 </footer> 

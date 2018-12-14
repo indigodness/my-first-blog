@@ -87,6 +87,9 @@ nav ul li:hover a,nav ul li:active a{
 nav ul li a.active{
     background-color: #0f4191;
 }
+\a.active{
+    background-color: #0f4191;
+}
 
 .rand
 {
@@ -222,63 +225,6 @@ table td
 {
     background-color: #1c1c1c;
 }
-
-form
-{
-    width: 960px;
-    margin: 10px 0;
-    padding: 5px 20px 10px;
-    border: 1px solid #999999;
-}
-label
-{
-	margin: 50px 0;
-    color: #dddddd;
-    font-weight: 700;
-    font-size: .9em;
-    text-align: left;
-}
-input[type="text"]
-{
-	margin: 5px 0;
-    width: 300px;
-    padding: 5px;
-    background-color: #eeeeee;
-    font-size: 1em;
-    color: #333333;
-}
-input[type="file"]
-{
-	margin: 5px 0;
-}
-
-textarea
-{
-    width: 300px;
-    padding: 5px;
-    background-color: #eeeeee;
-    font-size: 1em;
-    color: #333333;
-    height: 150px;
-    line-height: 1.2em;
-}
-input[type="submit"], input[type="button"],input[type="reset"]
-{
-    margin: 20px 30px 0 0;
-    padding: 6px 30px;
-    font-size: .75em;
-    color: white;
-    font-weight: 700;
-    background-color: #555555;
-    transition: background-color .75s;
-    border: 0;
-    cursor: default;  
-}
-input[type="submit"]:hover, input[type="button"]:hover,input[type="submit"]:active, input[type="button"]:active
-{
-    background-color: #ef3e36;
-}
-
 
 
 .dropbtn { 

@@ -1,19 +1,19 @@
 {% load static %}
+
 <!DOCTYPE html> 
 <html> 
 <head> 
 <meta charset="utf-8"> 
-<title> About &mdash; IM </title> 
-    <link rel="stylesheet" href="style.css">
+<title> About us &mdash; IM </title> 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head> 
 <body>
-<img src="images/logo.png" alt="Our logo" style="float:left;width:21%;height:20%;"> 
+<img src="{% static 'images/logo.png'%}" alt="Our logo" style="float:left;width:21%;height:20%;"> 
 <table id="c" style="float: right; text-decoration: none;">
     <tr>
-        <td><img src="images/clock.png" style="float: right; font-weight: 4%;height: 8%"></td>
+        <td><img src="{% static 'images/clock.png' %}" style=" font-weight: 4%;height: 8%"></td>
         <td style="text-align: center; font-family: serif; font-size: 20px; color: #070b4a"> Time schedule: </td>
-        <td><img src="images/phone.png" style="font-weight: 25px; height: 25px; float: right"></td>
+        <td><img src="{% static 'images/phone.png' %}" style="font-weight: 25px; height: 25px;"></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (707) 123-77-83 </span></td>
     </tr>
     
@@ -30,44 +30,38 @@
         <td></td>
         <td style="font-family: serif; color: #070b4a"> <span style="font-size: 90%;">8 (708) 293-48-07 </span></td>
     </tr> 
-        
-        
 </table>
 <br><br><br><br><br><br><br><br>
-        <header style="background-color: #0e5ad3">
+    <header style="background-color: #0e5ad3">
  <nav> 
     <ul class="menu"> 
-<li> <a href="main.html" tabindex="1" title="Main" target="_self"> Main </a> </li> 
+<li> <a href="{% url 'main' %}"> Main </a> </li> 
 <div class="dropdown"> 
-<li><a class="dropbtn" tabindex="2" title="Grocery">Grocery</a> </li>
+<li><a class="dropbtn">Grocery</a> </li>
 <div class="dropdown-content"> 
 
-<a href="grocery/bakery.html" target="_self">Bakery</a> 
-<a href="grocery/cereal.html" target="_self">Cereal</a> 
-<a href="grocery/diary.html" target="_self">Diary</a> 
-<a href="grocery/drinks.html" target="_self">Drinks</a> 
-<a href="grocery/frozen.html" target="_self">Frozen</a> 
-<a href="grocery/meat.html" target="_self">Meat</a> 
-<a href="grocery/snack.html" target="_self">Snack</a> 
-<a href="grocery/vegan.html" target="_self">Vegan</a>
+<a href="{% url 'bakery' %}">Bakery</a> 
+<a href="{% url 'cereal' %}">Cereal</a> 
+<a href="{% url 'diary' %}">Diary</a> 
+<a href="{% url 'drinks' %}">Drinks</a> 
+<a href="{% url 'frozen' %}">Frozen</a> 
+<a href="{% url 'meat' %}">Meat</a> 
+<a href="{% url 'snack' %}">Snack</a> 
+<a href="{% url 'vegan' %}">Vegan</a>
 </div> 
-    </div> 
-
-  
-
-
-<li> <a href="stores.html" tabinex="3" title="Stores" target="_self"> Stores </a> </li> 
-<li> <a href="about.html" tabindex="4" title="About" target="_self" class="active" style="border: 0px;"> About us </a> </li> 
+</div> 
+<li> <a href="{% url 'stores' %}"> Stores </a> </li> 
+<li> <a href="{% url 'about' %}" class="active"> About us </a> </li> 
 
 </ul>
 </nav>
 <br><br>
-</header>
+</header> 
 <main> 
     
     <h1 style="color: #070b4a">"Indigo market" Since 2017 <br><br></h1>
      <h2 style="color: #070b4a">Our first store was located in Russia and looked like this:</h2> <br>
-<img src="images/im.jpg" alt="Our logo" style="float:none;width:100%;height:100%;"> 
+<img src="{% static 'images/im.jpg' %}" alt="Our logo" style="float:none;width:100%;height:100%;"> 
     <br><br><br>
     <h2 style="color: #070b4a">But now we are the 1st supermarket in Kazakhstan,</h2>
     <p style="color: #070b4a">
@@ -96,20 +90,21 @@ Follow us:
     </p>
     <table id="d" style="float: left; text-decoration: none; ">
     <tr>
-        <td><a href="https://www.vk.com/indigodness"><img src="images/vk.png" style="font-weight: 25px; height: 25px"></a></td>
-        <td><a href="https://www.facebook.com/indigodness"><img src="images/fcb.png" style="font-weight: 25px; height: 25px"></a></td>
-        <td><a href="https://www.twitter.com/indigodness"><img src="images/twit.png" style="font-weight: 25px; height: 25px"></a></td>
-        <td><a href="https://www.instagram.com/indigodness"><img src="images/inst.png" style="font-weight: 25px; height: 25px"></a></td>
+        <td><a href="https://www.vk.com/indigodness"><img src="{% static 'images/vk.png' %}" style="font-weight: 25px; height: 25px"></a></td>
+        <td><a href="https://www.facebook.com/indigodness"><img src="{% static 'images/fcb.png' %}" style="font-weight: 25px; height: 25px"></a></td>
+        <td><a href="https://www.twitter.com/indigodness"><img src="{% static 'images/twit.png' %}" style="font-weight: 25px; height: 25px"></a></td>
+        <td><a href="https://www.instagram.com/indigodness"><img src="{% static 'images/inst.png' %}" style="font-weight: 25px; height: 25px"></a></td>
     </tr>
     
 </table>
-
-    <form>
+<br><br><br><br><br>
+ <!--   <form>
 <input type="text" placeholder="Искать здесь...">
 <input type="hidden" name="as_sitesearch" value="indigodness.pythonanywhere.com"> 
 <button type="submit"></button>
 </form>
- 
+ -->
+    <h4> Rate us: </h4>
 <form>
 <p>
 <label for="text_field">First Name:</label>
